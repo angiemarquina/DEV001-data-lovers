@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,600&family=Inter&display=swap');
+@import url(//db.onlinewebfonts.com/c/14c0006cfad2ad4520ec60c745a7f460?family=SpumoniLPW01-Regular);
+:root{
+    --nav-gradient: linear-gradient(to left, #9D9A76, #8D7747);
+    --morado-grisaceo: #948A8A;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+/*Nav*/
+.nav-section{
+    background: var(--nav-gradient);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    width: 100%;
+    height: 50px;
+    padding: 0px 20px;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-ghibli{
+    width: 30px;
+    height: 30px;
+}
+
+.nav-list{
+    display: none;
+    list-style: none;
+}
+
+.list-options a{
+    display: flex;
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.list-directors{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: var(--nav-gradient);
+}
+
+/*Slogan*/
+.slogan-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./img/3i.jpg);
+    opacity: 80%;
+    background-position: center top;
+    background-size: cover;
+    width: 100%;
+    height: 475px;
+    position: relative;
+}
+
+.slogan-container h1{
+    color: white;
+    -webkit-text-stroke: 0.1px #6D5741;
+    font-family: "SpumoniLPW01-Regular";
+    font-size: 80px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.slogan-container p{
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/*Cards*/
+.cards-container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+
+.film-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.film-card{
+    border-radius: 5px;
+    width: 150px;
+    height: 285px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    background-color: #C3A97F;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+.film-card img{
+    width: 100%;
+    height: 200px;
+    border-radius: 5px 5px 0 0;
+}
+
+.text-card{
+    color:white;
+    font-size: 10px;
+    margin: 5px 0px;
+    padding: 0 10px;
+}
+
+.bxs-star{
+    color: #ffd60a;
+    font-size: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .nav-section{
+        height: 65px;
+    }
+
+    .nav-list{
+        display: flex;
+    }
+        
+    .list-options{
+        list-style: none;
+    }
+    
+    .list-options a{
+        display: flex;
+        align-items: center;
+        padding: 25px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 800;
+    }
+
+    .slogan-container{
+        background-attachment: fixed;
+    }
+
+    .film-card{
+        width: 250px;
+        height: 450px;
+    }
+
+    .film-card img{
+        height: 350px;
+    }
+
+    .text-card{
+        font-size: 15px;
+    }
+
+    .bxs-star{
+        font-size: 20px;
+    }
+}
+
+
+

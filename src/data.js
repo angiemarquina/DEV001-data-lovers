@@ -1,9 +1,3 @@
-// estas funciones son de ejemplo
-
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
+export const filterDirectors = (data, directors) =>{
+  return data.filter(film => film.director === directors)
+}

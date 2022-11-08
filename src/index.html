@@ -2,11 +2,56 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
-    <div id="root"></div>
+    <header>
+      <section>
+        <label>
+          <!--<i class='bx bx-menu'></i>-->
+        </label>
+      </section>
+
+      <section class="nav-section">
+        <img src="./img/home.png" class="logo-ghibli" alt="logo del studio ghibli">
+          <nav class="nav-header">
+            <ul class="nav-list">
+              <li class="list-options">
+                <a href="#">Directors</a>
+                <ul class="list-directors">
+                  <li><a href="#" id="Gorō Miyazaki" class="list-director">Gorō Miyazaki</a></li>
+                  <li><a href="#" id="Hayao Miyazaki"class="list-director">Hayao Miyazaki</a></li>
+                  <li><a href="#" id="Hiromasa Yonebayashi"class="list-director">Hiromasa Yonebayashi</a></li>
+                  <li><a href="#" id="Hiroyuki Morita"class="list-director">Hiroyuki Morita</a></li>
+                  <li><a href="#" id="Isao Takahata"class="list-director">Isao Takahata</a></li>
+                  <li><a href="#" id="Yoshifumi Kondō"class="list-director">Yoshifumi Kondō</a></li>
+                </ul>
+              </li>
+              <li class="list-options">
+                <a href="#">More recent</a>
+              </li>
+              <li class="list-options">
+                <a href="#">More prominent</a>
+              </li>
+            </ul>
+          </nav>
+      </section>
+      
+      <section class="slogan-container">
+          <h1>Ghiblioteca</h1>
+          <p>Encuentra aquí todas las peliculas del Studio Ghibli</p>
+      </section>
+    </header>
+    
+    <main>
+      <section class="cards-container">
+        <div id="showFilms" class="film-cards"></div>
+      </section>
+    </main>
+
     <script src="main.js" type="module"></script>
   </body>
 </html>
