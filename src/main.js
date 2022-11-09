@@ -22,12 +22,18 @@ const showData = (films) => {
 
 showData(safeData);
 
-const showDirectors = document.querySelector(".list-directors")
-showDirectors.addEventListener("click",(e) => {
-    e.preventDefault();
-    let choiceDirector = e.target.id;
-    const peliKondo = filterDirectors(safeData,choiceDirector)
+const showDirectors = document.querySelector(".select-directors");
+//console.log(showDirectors)
+showDirectors.addEventListener("change",(e) => {
+    //console.log(e.target.value)
+    let choiceDirector = e.target.value;
+    const pelisDirectors = filterDirectors (safeData,choiceDirector);
     allFilms.innerHTML = "";
-    //console.log(e);
-    showData(peliKondo);
+    showData(pelisDirectors);
+});
+
+const home = document.querySelector(".logo-ghibli")
+home.addEventListener("click",() => {
+    allFilms.innerHTML  = "";
+    showData(safeData);
 });

@@ -9,35 +9,8 @@
   </head>
   <body>
     <header>
-      <section>
-        <label>
-          <!--<i class='bx bx-menu'></i>-->
-        </label>
-      </section>
-
-      <section class="nav-section">
+      <section class="header-section">
         <img src="./img/home.png" class="logo-ghibli" alt="logo del studio ghibli">
-          <nav class="nav-header">
-            <ul class="nav-list">
-              <li class="list-options">
-                <a href="#">Directors</a>
-                <ul class="list-directors">
-                  <li><a href="#" id="Gorō Miyazaki" class="list-director">Gorō Miyazaki</a></li>
-                  <li><a href="#" id="Hayao Miyazaki"class="list-director">Hayao Miyazaki</a></li>
-                  <li><a href="#" id="Hiromasa Yonebayashi"class="list-director">Hiromasa Yonebayashi</a></li>
-                  <li><a href="#" id="Hiroyuki Morita"class="list-director">Hiroyuki Morita</a></li>
-                  <li><a href="#" id="Isao Takahata"class="list-director">Isao Takahata</a></li>
-                  <li><a href="#" id="Yoshifumi Kondō"class="list-director">Yoshifumi Kondō</a></li>
-                </ul>
-              </li>
-              <li class="list-options">
-                <a href="#">More recent</a>
-              </li>
-              <li class="list-options">
-                <a href="#">More prominent</a>
-              </li>
-            </ul>
-          </nav>
       </section>
       
       <section class="slogan-container">
@@ -47,6 +20,21 @@
     </header>
     
     <main>
+      <section class="select-container">
+          <label class="select-options">
+            Choose an director:
+            <select class="select-directors">
+              <option disabled selected>Select your option</option>
+              <option class="select-director" value="Gorō Miyazaki">Gorō Miyazaki</option>
+              <option class="select-director" value="Hayao Miyazaki">Hayao Miyazaki</option>
+              <option class="select-director" value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+              <option class="select-director" value="Hiroyuki Morita">Hiroyuki Morita</option>
+              <option class="select-director" value="Isao Takahata">Isao Takahata</option>
+              <option class="select-director" value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+            </select>
+          </label>
+      </section>
+
       <section class="cards-container">
         <div id="showFilms" class="film-cards"></div>
       </section>
