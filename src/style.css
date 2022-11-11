@@ -107,7 +107,7 @@ body{
     font-size: 10px;
 }
 
-.select-options{
+.select-container{
     background: var(--nav-gradient);
     border-radius: 5px;
     display: flex;

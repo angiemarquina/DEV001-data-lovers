@@ -18,7 +18,7 @@ const showData = (films) => {
         <p class="text-card">Year: ${filmYear}</p>
         <p class="text-card"><i class='bx bxs-star'></i> ${filmScore}</p></div>`
     });
-}
+};
 
 showData(safeData);
 

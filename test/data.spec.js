@@ -1,4 +1,4 @@
-import { filterDirectors} from '../src/data.js';
+import { filterDirectors } from '../src/data.js';
 
 const ghibliData = [
   {
@@ -21,25 +21,31 @@ const ghibliData = [
     "director": "Hayao Miyazaki",
     "release_date": "1989",
     "rt_score": "96",
-  }
-]
+  },
+];
 
+/*Test para filter*/
 describe('filterDirectors test', () => {
-  it('is a function', () => {
+  it('es una función', () => {
     expect(typeof filterDirectors).toBe('function');
   });
 
-  it('returns films', () => {
-    expect("Hayao Miyazaki",ghibliData).toEqual(
-      [
+  it('debe retornar las películas según el nombre del director seleccionado', () => {
+    const exampleData = [
+      {
+        "id": "2baf70d1-42bb-4437-b551-e5fed5a87abe",
+        "title": "Castle in the Sky",
+        "director": "Hayao Miyazaki",
+        "release_date": "1986",
+        "rt_score": "95"
+      }
+    ];
+    const director = [
         {
-          "id": "cd3d059c-09f4-4ff3-8d63-bc765a5184fa",
-          "title": "Howl's Moving Castle",
           "director": "Hayao Miyazaki",
-          "release_date": "2004",
-          "rt_score": "87",
-        },
-      ]
-    );
+        }
+      ];
+    const expectResult = filterDirectors(ghibliData,director);
+    expect(filterDirectors(exampleData)).toEqual(expectResult);
   });
 });
