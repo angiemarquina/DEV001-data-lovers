@@ -1,4 +1,4 @@
-import { filterDirectors } from './data.js';
+import { filterDirectors, sortYears } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 const safeData = data.films;
@@ -27,7 +27,7 @@ const showDirectors = document.querySelector(".select-directors");
 showDirectors.addEventListener("change",(e) => {
     //console.log(e.target.value)
     let choiceDirector = e.target.value;
-    const pelisDirectors = filterDirectors (safeData,choiceDirector);
+    const pelisDirectors = filterDirectors(safeData,choiceDirector);
     allFilms.innerHTML = "";
     showData(pelisDirectors);
 });
@@ -36,4 +36,14 @@ const home = document.querySelector(".logo-ghibli")
 home.addEventListener("click",() => {
     allFilms.innerHTML  = "";
     showData(safeData);
+});
+
+const year = document.querySelector(".select-years")
+year.addEventListener("change",(e) => {
+    //console.log(e.target.value)
+    let choiceYear = e.target.value;
+    const showYear = sortYears(safeData,choiceYear);
+    allFilms.innerHTML = "";
+    //console.log(showYear)
+    showData(showYear);
 });
