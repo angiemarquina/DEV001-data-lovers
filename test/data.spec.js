@@ -1,28 +1,5 @@
-import { filterDirectors } from '../src/data.js';
+import { filterDirectors, sortYears } from '../src/data.js';
 
-const ghibliData = [
-    {
-        "id": "2baf70d1-42bb-4437-b551-e5fed5a87abe",
-        "title": "Castle in the Sky",
-        "director": "Hayao Miyazaki",
-        "release_date": "1986",
-        "rt_score": "95",
-    },
-    {
-        "id": "58611129-2dbc-4a81-a72f-77ddfc1b1b49",
-        "title": "My Neighbor Totoro",
-        "director": "Hayao Miyazaki",
-        "release_date": "1988",
-        "rt_score": "93",
-    },
-    {
-        "id": "ea660b10-85c4-4ae3-8a5f-41cea3648e3e",
-        "title": "Kiki's Delivery Service",
-        "director": "Hayao Miyazaki",
-        "release_date": "1989",
-        "rt_score": "96",
-    }
-];
 
 /*Test para filter*/
 describe('filterDirectors test', () => {
@@ -33,19 +10,57 @@ describe('filterDirectors test', () => {
     it('debe retornar las películas según el nombre del director seleccionado', () => {
         const exampleData = [
             {
-                "id": "2baf70d1-42bb-4437-b551-e5fed5a87abe",
                 "title": "Castle in the Sky",
-                "director": "Hayao Miyazaki",
-                "release_date": "1986",
-                "rt_score": "95"
-            }
-        ];
-        const director = [
+                "director": "Hayao Miyazaki"
+            },
             {
-                "director": "Hayao Miyazaki",
+                "title": "Grave of the Fireflies",
+                "director": "Isao Takahata"
+            },
+            {
+                "title": "Whisper of the Heart",
+                "director": "Yoshifumi Kondō"
             }
         ];
-        const expectResult = filterDirectors(ghibliData, director);
-        expect(filterDirectors(exampleData)).toEqual(expectResult);
+
+        const expectResult = [
+            {
+                "title": "Castle in the Sky",
+                "director": "Hayao Miyazaki"
+            }
+        ];
+
+        const filterDirector = filterDirectors(exampleData, "Hayao Miyazaki");
+        expect(filterDirector).toEqual(expectResult);
+    });
+});
+
+/*Test para sort*/
+describe('sortYears test', () => {
+    it('es una función', () => {
+        expect(typeof sortYears).toBe('function');
+    });
+
+    it('debe retornar las películas en orden ascendente y descendente', () => {
+        const exampleData = [
+            { "release_date": "2014" },
+            { "release_date": "1986" },
+            { "release_date": "2001" }
+        ];
+
+        const expectDescendingResult = [
+            { "release_date": "2014" },
+            { "release_date": "2001" },
+            { "release_date": "1986" }
+        ];
+        
+        const expectAscendingResult = [
+            { "release_date": "1986" },
+            { "release_date": "2001" },
+            { "release_date": "2014" }
+        ];
+
+        expect(sortYears(exampleData, "Oldest")).toEqual(expectAscendingResult);
+        expect(sortYears(exampleData, "Most recent")).toEqual(expectDescendingResult);
     });
 });
