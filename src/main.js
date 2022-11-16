@@ -10,13 +10,11 @@ const showData = (films) => {
     films.forEach(film => {
         let filmPoster = film.poster;
         let filmTitle = film.title;
-        let filmDirector = film.director;
         let filmYear = film.release_date;
         let filmScore = film.rt_score;
         allFilms.innerHTML += `<div class="film-card">
         <img src=${filmPoster}>
         <h1 class="text-card">${filmTitle}</h1>
-        <p class="text-card">Director: ${filmDirector}</p>
         <p class="text-card">Year: ${filmYear}</p>
         <p class="text-card"><i class='bx bxs-star'></i> ${filmScore}</p></div>`
     });
