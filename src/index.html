@@ -12,38 +12,43 @@
 <body>
   <header>
     <section class="header-section">
-      <img src="./img/home.png" class="logo-ghibli" alt="logo del studio ghibli">
-    </section>
+      <div class="img-header">
+        <img src="./img/logo_ghibli.png" id="logoGhibli" class="logo-ghibli" alt="logo del studio ghibli">
+      </div>
 
-    <section class="slogan-container">
-      <h1>Ghiblibrary</h1>
-      <p>Find here all the films of the most famous studio of all</p>
     </section>
   </header>
 
   <main>
+    <section class="slogan-container">
+      <h1 class="slogan-title">Ghiblioteca</h1>
+      <p class="slogan-subtitle">Find here all the films of the most famous studio of all</p>
+    </section>
+
     <section class="select-container">
-      <h2 class="subtitulo-movies">Movies<span>(20 results)</span></h2>
-      <div class="father-selects">
-        <label class="select-options">
-          <select id="selectByDirectors" class="select-directors">
-            <option disabled selected>Choose by director</option>
-            <option class="select-director" value="Gorō Miyazaki">Gorō Miyazaki</option>
-            <option class="select-director" value="Hayao Miyazaki">Hayao Miyazaki</option>
-            <option class="select-director" value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
-            <option class="select-director" value="Hiroyuki Morita">Hiroyuki Morita</option>
-            <option class="select-director" value="Isao Takahata">Isao Takahata</option>
-            <option class="select-director" value="Yoshifumi Kondō">Yoshifumi Kondō</option>
-          </select>
-        </label>
-  
-        <label class="select-options">
-          <select id="selectByYears" class="select-years">
-            <option disabled selected>Choose by year</option>
-            <option class="select-year" value="Most recent">Most recent</option>
-            <option clas="select-year" value="Oldest">Oldest</option>
-          </select>
-        </label>
+      <h2 class="subtitle-movies"><span>🎬  </span>Movies (20 results)</h2>
+      <div class="all-selects">
+        <select id="filterByDirectors" class="select-options">
+          <option disabled selected>Filter by director</option>
+          <option class="select-director" value="Gorō Miyazaki">Gorō Miyazaki</option>
+          <option class="select-director" value="Hayao Miyazaki">Hayao Miyazaki</option>
+          <option class="select-director" value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+          <option class="select-director" value="Hiroyuki Morita">Hiroyuki Morita</option>
+          <option class="select-director" value="Isao Takahata">Isao Takahata</option>
+          <option class="select-director" value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+        </select>
+
+        <select id="sortByYears" class="select-options">
+          <option disabled selected>Sort by year</option>
+          <option class="select-year" value="Most recent">Most recent</option>
+          <option clas="select-year" value="Oldest">Oldest</option>
+        </select>
+
+        <!--<select id="sortByScore" class="select-options">
+          <option disabled selected>Sort by score</option>
+          <option class="select-score" value="Most prominent">Most prominent</option>
+          <option clas="select-score" value="Least prominent">Least prominent</option>-->
+        </select>
       </div>
     </section>
 
@@ -56,4 +61,3 @@
 </body>
 
 </html>
-
