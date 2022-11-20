@@ -1,26 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,600&family=Inter&display=swap');
-@import url(//db.onlinewebfonts.com/c/14c0006cfad2ad4520ec60c745a7f460?family=SpumoniLPW01-Regular);
-@import url('https://fonts.cdnfonts.com/css/euclid-circular-b');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-
-:root{
+:root {
     --nav-gradient: linear-gradient(120deg, rgba(161, 157, 122)0%, rgba(68, 95, 52, 0.8))100%;
-    --shadow: rgba(0,0,0,0.5);
+    --light-brown: #b0978c;
+    --pink: #b54e69;
+    --shadow: rgba(0, 0, 0, 0.5);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', serif;
 }
 
-body{
+body {
     background-color: white;
-    font-family: 'Inter', sans-serif;
 }
 
 /*Header*/
-.header-section{
+
+.header-section {
     background: var(--nav-gradient);
     box-shadow: 0px 0px 10px 0px var(--shadow);
     width: 100%;
@@ -28,90 +29,247 @@ body{
     padding: 0px 20px;
     position: fixed;
     z-index: 10;
-    display: flex;
-    align-items: center;
 }
 
-.logo-ghibli{
-    width: 30px;
-    height: 30px;
+.logo-ghibli {
+    margin-top: 4px;
+    width: 90px;
+    height: 40px;
 }
+
+@media only screen and (min-width: 768px) {
+
+    /* For desktop: */
+    .header-section {
+        height: 70px;
+    }
+
+    .logo-ghibli {
+        margin-top: 4px;
+        width: 130px;
+        height: 60px;
+    }
+}
+
+/*Final de Header*/
 
 /*Slogan*/
-.slogan-container{
+
+.slogan-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient( 120deg, rgba(176, 151, 140, 0.5) 0%, rgba(181, 79, 106, 0.7) 100% ), url(./img/walltotoro.jpg);
-    opacity: 80%;
+    background-image: linear-gradient(120deg, rgba(176, 151, 140, 0.5) 0%, rgba(181, 79, 106, 0.7) 100%), url(./img/wallmobile.jpg);
     background-position: center 80%;
     background-size: cover;
     width: 100%;
-    height: 580px;
+    height: 500px;
     position: relative;
 }
 
-.slogan-container h1{
+.slogan-title {
     color: white;
     -webkit-text-stroke: 0.1px #6D5741;
-    font-family: "SpumoniLPW01-Regular";
-    font-size: 80px;
+    font-size: 55px;
     font-weight: 700;
-    letter-spacing: 3px;
+    text-align: center;
 }
 
-.slogan-container p{
+.slogan-subtitle {
     color: white;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 700;
+    text-align: center;
 }
+
+@media only screen and (min-width: 768px) {
+
+    /* For desktop: */
+    .slogan-container {
+        background-image: linear-gradient(120deg, rgba(176, 151, 140, 0.5) 0%, rgba(181, 79, 106, 0.7) 100%), url(./img/walltotoro.jpg);
+        background-position: center top 43%;
+    }
+
+    .slogan-title {
+        font-size: 75px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .slogan-subtitle {
+        font-size: 18px;
+    }
+}
+
+/*Final de Slogan*/
+
+/*Select*/
+
+.select-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 30px 0 0 0;
+    box-sizing: border-box;
+    width: 80%;
+    margin: auto;
+}
+
+.subtitle-movies {
+    font-size: 18px;
+    font-weight: 700;
+    color: #3c2f29;
+}
+
+.all-selects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
+    width: 60%;
+}
+
+.select-options {
+    background: var(--pink);
+    border: none;
+    padding: 10px 10px;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: var(--sombra);
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* For desktop: */
+    .select-container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px 0;
+    }
+
+    .subtitle-movies {
+        font-size: 20px;
+    }
+
+    .all-selects {
+        justify-content: flex-end;
+    }
+}
+
+/*Final de Select*/
+
 
 /*Cards*/
-.cards-container{
+
+.cards-container {
     width: 90%;
     max-width: 1200px;
+    overflow: hidden;
     margin: auto;
     padding: 30px 0;
 }
 
-.film-cards{
+.film-cards {
+    padding: 10px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.film-card{
+.film-card {
     border-radius: 5px;
     width: 150px;
-    height: 285px;
-    margin-left: 5px;
+    height: 315px;
     margin-bottom: 15px;
-    background-color: #b0978c;
+    background-color: var(--light-brown);
     box-shadow: 0px 0px 10px 0px var(--shadow);
+    color: white;
 }
 
-.film-card img{
+.film-card img {
     width: 100%;
     height: 200px;
     border-radius: 5px 5px 0 0;
 }
 
-.text-card{
-    color:white;
+.texts-card {
     font-size: 10px;
-    margin: 5px 0px;
+    margin: 3px 0px;
     padding: 0 10px;
+    text-transform: uppercase;
 }
 
-.bxs-star{
+.texts-card h1 {
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.icon-card {
+    padding: 0 10px;
+    align-items: center;
+}
+
+.bxs-star {
     color: #ffd60a;
     font-size: 10px;
 }
 
+.icon-card p {
+    font-size: 10px;
+    font-weight: 300;
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* For desktop: */
+    .film-card {
+        width: 250px;
+        height: 450px;
+    }
+
+    .film-card img {
+        height: 350px;
+    }
+
+    .texts-card {
+        font-size: 12px;
+    }
+
+    .texts-card h1 {
+        font-size: 12px;
+    }
+
+    .bxs-star {
+        font-size: 20px;
+    }
+
+    .icon-card p {
+        font-weight: 600;
+    }
+}
+
+/*Final de Cards*/
 
 
-.select-container{
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.select-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -119,8 +277,7 @@ body{
     gap: 20px;
     padding: 40px 60px;
 }
-
-.select-directors, .select-years{
+.select-directors, .select-years, .select-scores{
     background: #a19d7a;
     border-radius: 8px;
     width: 215px;
@@ -131,48 +288,4 @@ body{
     cursor: pointer;
     font-size: 1rem;
     color: white;
-}
-
-@media only screen and (min-width: 768px) {
-    /* For desktop: */
-    .header-section{
-        height: 65px;
-    }
-        
-    .list-options{
-        list-style: none;
-    }
-    
-    .list-options a{
-        display: flex;
-        align-items: center;
-        padding: 25px;
-        color: white;
-        text-transform: uppercase;
-        font-size: 15px;
-        font-weight: 800;
-    }
-
-    .slogan-container{
-        background-attachment: fixed;
-    }
-
-    .film-card{
-        width: 250px;
-        height: 450px;
-    }
-
-    .film-card img{
-        height: 350px;
-    }
-
-    .text-card{
-        font-size: 15px;
-    }
-
-    .bxs-star{
-        font-size: 20px;
-    }
-}
-
-
+}/*
