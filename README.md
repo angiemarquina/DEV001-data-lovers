@@ -4,10 +4,9 @@
 
 * [1. Preámbulo](#1-preámbulo)
 * [2. Historias de usuario](#2-historias-de-usuario)
-* [3. Prototipos de baja fidelidad](#3-prototipos-de-baja-fidelidad)
-* [4. Prototipos de alta fidelidad](#4-prototipos-de-alta-fidelidad)
-* [5. Objetivos de aprendizaje](#5-objetivos-de-aprendizaje)
-* [6. Para considerar Project Feedback](#6-para-considerar-project-feedback)
+* [3. Prototipos de alta fidelidad](#3-prototipos-de-alta-fidelidad)
+* [4. Objetivos de aprendizaje](#4-objetivos-de-aprendizaje)
+* [5. Para considerar Project Feedback](#5-para-considerar-project-feedback)
 
 ***
 
@@ -23,10 +22,7 @@ Esta aplicación está destinada a los usuarios fanáticos y principiantes dentr
 - Historia de usuario 02 - Yo como usuario quiero poder filtrar las películas según directores para conocer más acerca de su trabajo realizado en el estudio.
 - Historia de usuario 03 - Yo como usuario quiero poder ordenar las películas de acuerdo a la fecha para poder saber cuáles son las más recientes y las más antiguas.
 
-## 3. Prototipos de baja fidelidad
-
-
-## 4. Prototipos de alta fidelidad
+## 3. Prototipos de alta fidelidad
 
 ![ALTA FIDELIDAD 1](https://user-images.githubusercontent.com/113926687/202916776-301b655b-8e9d-4844-bd80-29d87948716b.png)
 ![ALTA FIDELIDAD 2](https://user-images.githubusercontent.com/113926687/202916782-088e5ef4-84c2-4d1d-b439-3b7d3893ed84.png)
